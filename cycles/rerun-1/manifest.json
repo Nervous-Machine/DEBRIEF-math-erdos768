@@ -1,0 +1,120 @@
+{
+ "repo": "github.com/ericlisg/erdos768-lean",
+ "commit": "e46ab245f1e5eb2d1f0b184874c4e32e02ad16c9",
+ "tree_clean": true,
+ "lean_toolchain": "leanprover/lean4:v4.28.0",
+ "lean_version": "Lean (version 4.28.0, aarch64-unknown-linux-gnu, commit 7e01a1bf5c70fc6167d49c345d3bf80596e9a79b, Release)",
+ "lake_version": "Lake version 5.0.0-src+7e01a1b (Lean version 4.28.0)",
+ "packages": [
+  {
+   "name": "PrimeNumberTheoremAnd",
+   "rev": null,
+   "url": null,
+   "dir": "vendor/PrimeNumberTheoremAnd",
+   "inherited": false
+  },
+  {
+   "name": "LeanArchitect",
+   "rev": null,
+   "url": null,
+   "dir": "vendor/LeanArchitect",
+   "inherited": false
+  },
+  {
+   "name": "mathlib",
+   "rev": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+   "url": "https://github.com/leanprover-community/mathlib4.git",
+   "dir": null,
+   "inherited": false
+  },
+  {
+   "name": "batteries",
+   "rev": "495c008c3e3f4fb4256ff5582ddb3abf3198026f",
+   "url": "https://github.com/leanprover-community/batteries",
+   "dir": null,
+   "inherited": true
+  },
+  {
+   "name": "plausible",
+   "rev": "55c8532eb21ec9f6d565d51d96b8ca50bd1fbef3",
+   "url": "https://github.com/leanprover-community/plausible",
+   "dir": null,
+   "inherited": true
+  },
+  {
+   "name": "LeanSearchClient",
+   "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+   "url": "https://github.com/leanprover-community/LeanSearchClient",
+   "dir": null,
+   "inherited": true
+  },
+  {
+   "name": "importGraph",
+   "rev": "85b59af46828c029a9168f2f9c35119bd0721e6e",
+   "url": "https://github.com/leanprover-community/import-graph",
+   "dir": null,
+   "inherited": true
+  },
+  {
+   "name": "proofwidgets",
+   "rev": "be3b2e63b1bbf496c478cef98b86972a37c1417d",
+   "url": "https://github.com/leanprover-community/ProofWidgets4",
+   "dir": null,
+   "inherited": true
+  },
+  {
+   "name": "aesop",
+   "rev": "f642a64c76df8ba9cb53dba3b919425a0c2aeaf1",
+   "url": "https://github.com/leanprover-community/aesop",
+   "dir": null,
+   "inherited": true
+  },
+  {
+   "name": "Qq",
+   "rev": "b8f98e9087e02c8553945a2c5abf07cec8e798c3",
+   "url": "https://github.com/leanprover-community/quote4",
+   "dir": null,
+   "inherited": true
+  },
+  {
+   "name": "Cli",
+   "rev": "4f10f47646cb7d5748d6f423f4a07f98f7bbcc9e",
+   "url": "https://github.com/leanprover/lean4-cli",
+   "dir": null,
+   "inherited": true
+  }
+ ],
+ "lean_files_project_proper": 16,
+ "lean_files_vendored": 22,
+ "sha256": {
+  "RequestProject/Analytic.lean": "55f0f30e7e3624b28dca4108ea5a746db23083be706dd8567d6672c27184cd7a",
+  "RequestProject/AxiomCheck.lean": "d7b2b40565ce277da97cb6383c08751ea567c1d3e4703694cfc2e8436b0b8da4",
+  "RequestProject/Canonical.lean": "eb8dad5920bd21868d9c0b58f068de619defcc27834d8caba048919ff1eec337",
+  "RequestProject/Compression.lean": "df2db2c7ffbf9fc735bfcb3cd6efbb8576fab620b4d70f30ded209ff5bf147d7",
+  "RequestProject/Defs.lean": "e127dfdb2d74ff2bdda63e236f33b5b5f4177f25811c54df2405a2dc75671cda",
+  "RequestProject/Elementary.lean": "1a8a8ac630b89c21ddfc6d7dfa2045443747e257f5a628eeeb750c56c7de3f7d",
+  "RequestProject/LargeSieve.lean": "da375be0e55a4447aca23e7c4c4becd2314e1b778842adf41d29330510b55ee3",
+  "RequestProject/LargeSieveMult.lean": "104a2c930b379a64c2e4592d5a38c5a106676284f8e0c22bd97d76b32b47542a",
+  "RequestProject/LowerBound.lean": "81403285f43ae1ee702ef17da9515c1f6aecfe1efeb7b0c263e16c8e615ec78e",
+  "RequestProject/LowerBoundCount.lean": "089857381673ae602ed6906ca2347883bee8e0971a2fe6809b7abc908448cd8d",
+  "RequestProject/Main.lean": "f993d96a7f0a9639fd552867220ac43eb086bc72b827d7d7e55a6c5e5b2a0ea2",
+  "RequestProject/PNT.lean": "0420fd11de5c93a2e0857516f4dd9fd6119582b52e34984ab4fe3ed2b7808f6c",
+  "RequestProject/SubsetProduct.lean": "d5f9ca5bbe2304d2f27e1428402da7c6d987834f8af339ed66e00d48dbfe4b1a",
+  "RequestProject/SubsetProductCount.lean": "28952155942be7918aa6e03bc72c2cea702801b85e6f69a4f1e59c1d071fdb1e",
+  "RequestProject/UpperBound.lean": "0252ad0da620f8095d6a7ddb991970dd549755d52c22e7a0f00800c765b7aaf0",
+  "Challenge.lean": "db68529bf473c5a62bee287b09f7903913399b2787f1559a50b6f9107e1e1386",
+  "lakefile.toml": "f28d6c432d7a75bfb2993778456e0fd5c0ce6e0cdc8e043c97c6dab13d905678",
+  "lake-manifest.json": "0c4f67e8df5e003152cea33abc63404d365aaf9c51a2de643085514fe48fb3f1",
+  "lean-toolchain": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028",
+  "README.md": "4eb178f9ab965dcb5f1a5d32dd4319f0e41ee2dcfb13ad7cbdb2bf081176176d",
+  "formalization.yaml": "bdb12444ad1c6a966288967e39574dcd88bc07bd84b462977ca03c39800fedb4"
+ },
+ "machine": {
+  "arch": "aarch64",
+  "os": "Linux-7.0.0-42-generic-aarch64-with-glibc2.43",
+  "cores": 20,
+  "mem_gb": 98,
+  "vm": "Lima vz VM primegaps on an Apple-silicon host"
+ },
+ "default_target": "RequestProject (lakefile defaultTargets); the Challenge library is not part of it"
+}

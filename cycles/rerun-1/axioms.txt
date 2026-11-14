@@ -1,0 +1,14 @@
+# R4: lake env lean on a scratch file outside the repository; 2026-11-14T22:03:17Z
+'Erdos768.erdos_768' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos768.lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos768.upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MediumPNT' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos768.erdos_768 : Filter.Tendsto
+  (fun x => Real.log (x / ↑(Erdos768.Acount x)) / (√(Real.log x) * Real.log (Real.log x))) Filter.atTop
+  (nhds Erdos768.c₀)
+def Erdos768.SylowDivisor : ℕ → Prop :=
+fun n => ∀ (p : ℕ), Nat.Prime p → p ∣ n → ∃ d, d ∣ n ∧ 1 < d ∧ d % p = 1
+def Erdos768.Acount : ℝ → ℕ :=
+fun x => (Finset.filter Erdos768.SylowDivisor (Finset.Icc 1 ⌊x⌋₊)).card
+def Erdos768.c₀ : ℝ :=
+1 / (2 * √(Real.log 2))

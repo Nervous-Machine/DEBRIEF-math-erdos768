@@ -1,0 +1,19 @@
+# R3 scan, project proper = RequestProject/ and Challenge.lean (vendor/ and .lake/ excluded); 2026-11-14T22:00:06Z
+## sorry
+Challenge.lean:11:      atTop (nhds c₀) := sorry
+## admit
+RequestProject/LowerBoundCount.lean:487:tuples over the remaining coordinates whose images admit no vanishing nonempty
+## native_decide
+(none)
+## axiom declarations
+(none)
+## implemented_by / extern
+(none)
+## vendor, for information only
+sorry in vendor:
+vendor/LeanArchitect/Architect/Tactic.lean:76:`sorry_using [a, b]` is the same as `sorry`, but adds `a` and `b` as dependencies for the blueprint metadata.
+vendor/LeanArchitect/Architect/Tactic.lean:78:It is basically similar to `let := a; let := b; sorry`.
+vendor/LeanArchitect/Architect/Tactic.lean:89:    -- A non-synthetic sorry because the `sorry_using` tactic is explicitly written by the user
+axiom decls in vendor:
+vendor/PrimeNumberTheoremAnd/PrimeNumberTheoremAnd/Tactic/AdditiveCombination.lean:172:axiom qc : ℚ
+vendor/PrimeNumberTheoremAnd/PrimeNumberTheoremAnd/Tactic/AdditiveCombination.lean:173:axiom hqc : qc = 2*qc

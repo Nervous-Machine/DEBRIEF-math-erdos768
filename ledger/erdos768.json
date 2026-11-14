@@ -23,9 +23,9 @@
    "began": "2026-11-14",
    "status": "active",
    "record_quality": "full_ledger",
-   "record_note": "Opened at tier zero: the claim and its artifacts are pinned, the gaps are drawn, nothing has been run or read by Nervous Machine.",
+   "record_note": "Opened at tier zero on 2026-11-14: the claim and its artifacts pinned, the gaps drawn. Cycle 1, the same day: the Lean build rerun by Nervous Machine in a virtual machine under a pre-registered rule.",
    "record_limits": [
-    "Nothing in this record has been checked by Nervous Machine or by anyone independent of the claimants; every item is an open gap."
+    "The Lean build has been rerun once, by Nervous Machine. Nobody independent of the claimant has read the formal statement against the problem as posed, or the paper."
    ],
    "scope_limits": [
     "Nervous Machine keeps score of the checks; it does not check the mathematics line by line.",
@@ -35,24 +35,36 @@
     "spoken": "This record covers the claimed solution of Erdős problem #768: what has been claimed, what it rests on, and what would have to be checked by whom."
    },
    "short_version": {
-    "spoken": "Erdős asked for the exact rate at which the integers n, such that every prime factor p of n has a divisor of n greater than one congruent to one modulo p, thin out; the question bounds the possible orders of non-cyclic simple groups. In June 2026 Eric Li posted a paper claiming the exact constant, and in July a Lean development he reports as a complete formal check of the main theorem. Nobody independent has reported building it or reading the paper. Everything here is open."
+    "spoken": "Erdős asked for the exact rate at which the integers n, such that every prime factor p of n has a divisor of n greater than one congruent to one modulo p, thin out; the question bounds the possible orders of non-cyclic simple groups. In June 2026 Eric Li posted a paper claiming the exact constant, and in July a Lean development he reports as a complete formal check of the main theorem. On 2026-11-14 Nervous Machine built the Lean development at its pinned commit on an independent machine; the main theorem rests on the standard axioms only. Nobody independent has read the formal statement against the problem, or the paper. Those are the open gaps."
    },
    "what_happened": {
-    "spoken": "The claim was pinned from the public record: the problem page, the proof-claims thread, and every artifact the claimants made public, by commit or hash. Nothing was run. The gaps that follow are the checks still owed."
+    "spoken": "The claim was pinned from the public record. Nervous Machine then wrote down four checks and their predicted outcomes, fetched the Lean development at the pinned commit inside a virtual machine, built it, scanned it, and printed the main theorem's axioms with its own file. The build passed and the axioms are the standard three. The gaps that follow are the checks still owed, and they are now the human ones."
    },
    "implications": {
-    "rely_on": [],
+    "rely_on": [
+     {
+      "spoken": "the Lean development builds and its main theorem rests on the standard axioms only",
+      "finding_ids": [
+       "E1"
+      ]
+     }
+    ],
     "do_not_rely_on": [
      {
-      "spoken": "the claimed solution as settled; nothing in it has standing yet",
+      "spoken": "the claimed solution as settled: whether the formal statement is the problem Erdős posed, and whether the paper's argument is the one formalised, are both unread",
       "finding_ids": []
      }
     ],
     "stop": [],
-    "new": []
+    "new": [
+     {
+      "spoken": "the Lean repository's README credits Aristotle, Harmonic's system, as the formalisation agent, while the problem page lists GPT-5.5 Pro for the claim; a reader comparing AI-assisted claims should know both names",
+      "finding_ids": []
+     }
+    ]
    },
    "certainty_statement": {
-    "spoken": "Nothing is certified or accepted. Every item is open."
+    "spoken": "One item is certified by independent rerun. The semantic read and the reading of the paper are open."
    },
    "sources": [
     {
@@ -105,9 +117,147 @@
     "EG2",
     "EG3"
    ]
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "mission_id": "erdos768-2026-11",
+   "pod": "DEBRIEF-math-erdos768",
+   "created_by": "contributed cycle (merge_cycles.py)",
+   "created_at": "2026-11-14T22:05:01Z",
+   "provenance": {
+    "source": "contributed cycle file rerun-1.yaml"
+   },
+   "audience": "briefing",
+   "kind": "rerun",
+   "cycle": 1,
+   "dated": "2026-11-14",
+   "by": "Nervous Machine (Heidi Bennett; Claude Code as the operating agent)",
+   "not_an_author_of_the_claim": true,
+   "preregistered": {
+    "commit": "prereg_rerun.yaml",
+    "results": [
+     "cycles/rerun-1/manifest.json",
+     "cycles/rerun-1/build.log",
+     "cycles/rerun-1/time.txt",
+     "cycles/rerun-1/scan.txt",
+     "cycles/rerun-1/axioms.txt"
+    ],
+    "question": "Does the claimant's Lean development build at the pinned commit on an independent machine, with no sorry or admit, and which axioms does the main theorem use?",
+    "rule": "All checks pass as predicted; any miss is recorded under misses. The build runs only inside an isolated virtual machine.",
+    "predictions": [
+     "R1: commit present; HEAD matches; tree clean",
+     "R2: lake build exits 0 with no errors; wall time under three hours on 20 cores; peak memory under 48 GB",
+     "R3: no sorry, admit, native_decide or axiom declarations in the project proper (RequestProject/ and Challenge.lean; vendor/ excluded)",
+     "R4: the main theorem depends on propext, Classical.choice, Quot.sound only"
+    ],
+    "before_data": true
+   },
+   "environment": {
+    "hardware": "aarch64, 20 cores, 98 GB memory; Lima vz virtual machine on an Apple-silicon host, nothing from the repository executed on the host",
+    "toolchain": "leanprover/lean4:v4.28.0 (Lean 4.28.0, Lake 5.0.0); Mathlib 8f9d9cff6bd728b17a24e163c9402775d9e6a365 (v4.28.0) from the community olean cache; PrimeNumberTheoremAnd and LeanArchitect as vendored in the repository",
+    "wall_time": "0:02:08 for lake build after a 71 s Mathlib cache download"
+   },
+   "outcome": {
+    "verdict": "confirmed",
+    "numbers": {
+     "R1_head": "e46ab245f1e5eb2d1f0b184874c4e32e02ad16c9",
+     "R1_tree_clean": true,
+     "R2_exit_status": 0,
+     "R2_jobs": 8065,
+     "R2_modules_compiled_here": 37,
+     "R2_wall": "2:08.04",
+     "R2_max_rss_mb": 7583.3,
+     "R2_errors": 0,
+     "R3_sorry_hits": 1,
+     "R3_sorry_location": "Challenge.lean:11, the statement-only file; not in the default build target and not imported by RequestProject",
+     "R3_admit_hits": 0,
+     "R3_native_decide_hits": 0,
+     "R3_axiom_declarations_project_proper": 0,
+     "R3_axiom_declarations_vendored": 2,
+     "R3_axiom_declarations_vendored_where": "vendor/PrimeNumberTheoremAnd/.../Tactic/AdditiveCombination.lean:172-173 (qc, hqc); not in the main theorem's axiom list, see R4",
+     "R4_axioms_erdos_768": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ],
+     "R4_axioms_lower_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ],
+     "R4_axioms_upper_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ],
+     "R4_axioms_MediumPNT": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ],
+     "main_theorem": "Erdos768.erdos_768 : Filter.Tendsto (fun x => Real.log (x / ↑(Erdos768.Acount x)) / (√(Real.log x) * Real.log (Real.log x))) Filter.atTop (nhds Erdos768.c₀)",
+     "definitions": "SylowDivisor n := ∀ p, Nat.Prime p → p ∣ n → ∃ d, d ∣ n ∧ 1 < d ∧ d % p = 1; Acount x := (Finset.filter SylowDivisor (Finset.Icc 1 ⌊x⌋₊)).card; c₀ := 1 / (2 * √(Real.log 2))",
+     "formalisation_agent_per_README": "Aristotle (Harmonic); the problem page lists GPT-5.5 Pro for the claim"
+    },
+    "misses": [
+     "R3, in letter: one textual `sorry` in Challenge.lean line 11. That file states the main theorem with `sorry` as its proof and is a separate library, not in the default build target and not imported by anything the main theorem depends on. The axiom print in R4 shows no sorryAx in the main theorem's dependency graph, which is the check the prediction was written for."
+    ]
+   },
+   "spoken": "Nervous Machine fetched Eric Li's Lean development for problem 768 at the pinned commit, inside a virtual machine, and built it with the Lean toolchain the repository pins. The build finished in a little over two minutes with no errors. Our own axiom print shows the main theorem resting on the three standard axioms only, with no sorry anywhere in its dependency graph. One prediction was wrong in letter: a statement-only file outside the build carries a placeholder sorry. The repository's README credits Aristotle, Harmonic's system, as the formalisation agent. Whether the formal statement is the problem Erdős posed is still a question for a mathematician.",
+   "finding_ids": [
+    "E1"
+   ],
+   "gap_ids": [
+    "EG1",
+    "EG2"
+   ]
   }
  ],
- "findings": [],
+ "findings": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "mission_id": "erdos768-2026-11",
+   "pod": "DEBRIEF-math-erdos768",
+   "audience": "briefing",
+   "created_by": "DEBRIEF-math-erdos768 maintainer, after cycle 1",
+   "created_at": "2026-11-14T22:10:00Z",
+   "provenance": {
+    "source": "cycle 1 rerun logs in cycles/rerun-1/"
+   },
+   "finding_id": "E1",
+   "kind": "learned",
+   "spoken": "The claimant's Lean development builds at the pinned commit on a machine independent of the author, with the toolchain and Mathlib version it pins, and the main theorem Erdos768.erdos_768 depends on the three standard axioms only: propext, Classical.choice and Quot.sound. No sorry reaches it.",
+   "evidence": {
+    "numbers": {
+     "commit": "e46ab245f1e5eb2d1f0b184874c4e32e02ad16c9",
+     "exit_status": 0,
+     "wall": "2:08.04",
+     "max_rss_mb": 7583.3,
+     "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+     ]
+    },
+    "cycles": [
+     1
+    ],
+    "confirmed_by": [
+     "rerun by Nervous Machine in an isolated VM; axiom print from our own scratch file, not the repository's AxiomCheck"
+    ]
+   },
+   "standing": {
+    "status": "certified",
+    "basis": "a kernel-checked build rerun by a party independent of the author, under a rule written first",
+    "note": "one machine, one party; a second rerun by someone outside Nervous Machine would strengthen it. This certifies that the formal statement follows from Lean's axioms; it says nothing about whether the formal statement is the problem Erdős posed (gap EG2)."
+   },
+   "certainty": {
+    "earned": true,
+    "note": "independent rerun (audit regime)"
+   },
+   "edge_refs": []
+  }
+ ],
  "gaps": [
   {
    "schema_version": "nm-debrief-v1",
@@ -121,10 +271,17 @@
    "audience": "briefing",
    "gap_id": "EG1",
    "title": "The Lean development has not been built or kernel-checked by anyone outside the claimant",
-   "status": "proposed",
+   "status": "resolved_learned",
    "opened_cycle": 0,
    "priority": 1,
-   "history": [],
+   "history": [
+    {
+     "cycle": 1,
+     "hypothesis": "the Lean development builds independently with standard axioms only",
+     "before_data": true,
+     "result": "build exit 0 in 2:08 on 20 cores, 7.6 GB peak; axioms propext, Classical.choice, Quot.sound; status proposed -> resolved_learned (one independent party; a second rerun would strengthen)"
+    }
+   ],
    "closes_with": [
     {
      "what": "a pre-registered rerun: fetch at the pinned commit, build, confirm no sorry or admit, print the axioms",
@@ -152,10 +309,17 @@
    "audience": "briefing",
    "gap_id": "EG2",
    "title": "Do the formal statements say what the problem asks?",
-   "status": "proposed",
+   "status": "in_cycle",
    "opened_cycle": 0,
    "priority": 2,
-   "history": [],
+   "history": [
+    {
+     "cycle": 1,
+     "hypothesis": "the formal statement, verbatim, is needed before anyone can read it against the problem",
+     "before_data": true,
+     "result": "main theorem and its three definitions printed by Lean into cycles/rerun-1/axioms.txt; the reading itself is still open"
+    }
+   ],
    "closes_with": [
     {
      "what": "two independent mathematicians read the formal statement against the problem as posed and sign, or refuse",
