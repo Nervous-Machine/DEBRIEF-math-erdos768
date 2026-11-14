@@ -1,0 +1,258 @@
+{
+ "missions": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos768-2026-11",
+   "pod": "DEBRIEF-math-erdos768",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "title": "The claimed solution of Erdős Problem #768 (density of integers with a witness divisor for every prime factor)",
+   "kind": "audit",
+   "protocol_version": "0.1.0",
+   "claim_rule_met": false,
+   "label": "Erdős #768",
+   "area": "Number theory: multiplicative structure",
+   "rests_on": "an arXiv paper and a Lean development that vendors two other Lean projects",
+   "pods": [
+    "DEBRIEF-math-erdos768"
+   ],
+   "began": "2026-11-14",
+   "status": "active",
+   "record_quality": "full_ledger",
+   "record_note": "Opened at tier zero: the claim and its artifacts are pinned, the gaps are drawn, nothing has been run or read by Nervous Machine.",
+   "record_limits": [
+    "Nothing in this record has been checked by Nervous Machine or by anyone independent of the claimants; every item is an open gap."
+   ],
+   "scope_limits": [
+    "Nervous Machine keeps score of the checks; it does not check the mathematics line by line.",
+    "Public record through 2026-11-14."
+   ],
+   "opening": {
+    "spoken": "This record covers the claimed solution of Erdős problem #768: what has been claimed, what it rests on, and what would have to be checked by whom."
+   },
+   "short_version": {
+    "spoken": "Erdős asked for the exact rate at which the integers n, such that every prime factor p of n has a divisor of n greater than one congruent to one modulo p, thin out; the question bounds the possible orders of non-cyclic simple groups. In June 2026 Eric Li posted a paper claiming the exact constant, and in July a Lean development he reports as a complete formal check of the main theorem. Nobody independent has reported building it or reading the paper. Everything here is open."
+   },
+   "what_happened": {
+    "spoken": "The claim was pinned from the public record: the problem page, the proof-claims thread, and every artifact the claimants made public, by commit or hash. Nothing was run. The gaps that follow are the checks still owed."
+   },
+   "implications": {
+    "rely_on": [],
+    "do_not_rely_on": [
+     {
+      "spoken": "the claimed solution as settled; nothing in it has standing yet",
+      "finding_ids": []
+     }
+    ],
+    "stop": [],
+    "new": []
+   },
+   "certainty_statement": {
+    "spoken": "Nothing is certified or accepted. Every item is open."
+   },
+   "sources": [
+    {
+     "kind": "problem",
+     "ref": "https://www.erdosproblems.com/768"
+    },
+    {
+     "kind": "arxiv",
+     "ref": "arXiv:2606.24872v2 \"A Resolution of Erdős Problem 768: the Sylow Divisor Condition\" (published 2026-06-23, last revised 2026-07-13)"
+    },
+    {
+     "kind": "repo",
+     "ref": "github.com/ericlisg/erdos768-lean at commit e46ab245f1e5eb2d1f0b184874c4e32e02ad16c9 (2026-08-02); licence Apache-2.0; 38 Lean files; has a lakefile"
+    }
+   ]
+  }
+ ],
+ "cycles": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos768-2026-11",
+   "pod": "DEBRIEF-math-erdos768",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "cycle": 0,
+   "dated": "2026-06-23 to 2026-11-14",
+   "kind": "replay",
+   "preregistered": {
+    "question": "What is on the public record about this claim?",
+    "rule": "no look-ahead; each event dated by its first public posting; artifacts pinned by commit or hash",
+    "predictions": [],
+    "commit": null,
+    "before_data": false
+   },
+   "outcome": {
+    "verdict": "admitted",
+    "numbers": {
+     "claims": 1,
+     "artifacts": 2
+    }
+   },
+   "spoken": "Eric Li posted the paper on arXiv; the Erdős-problems AI wiki listed it as a candidate full solution, marked unverified. The Lean repository was created. The proof claim was listed on the problem page with links to the paper and the formalisation. The Lean repository reached its current commit; it vendors the PrimeNumberTheoremAnd and LeanArchitect projects. The problem page lists one proof claim, not marked accepted by the site, and no third-party formalisation of the problem statement.",
+   "finding_ids": [],
+   "gap_ids": [
+    "EG1",
+    "EG2",
+    "EG3"
+   ]
+  }
+ ],
+ "findings": [],
+ "gaps": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos768-2026-11",
+   "pod": "DEBRIEF-math-erdos768",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG1",
+   "title": "The Lean development has not been built or kernel-checked by anyone outside the claimant",
+   "status": "proposed",
+   "opened_cycle": 0,
+   "priority": 1,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "a pre-registered rerun: fetch at the pinned commit, build, confirm no sorry or admit, print the axioms",
+     "kind": "rerun",
+     "external": true,
+     "who_could_act": "anyone with a machine and a few hours"
+    }
+   ],
+   "spoken": "The claimant reports a Lean development that compiles with standard axioms only. Nobody outside the claimant has reported building it.",
+   "ask": {
+    "spoken": "A rerun of the Lean build on an independent machine, written down first."
+   },
+   "expected_signal": "a rerun cycle reporting build exit status, the sorry/admit scan and the axiom list for the main theorem",
+   "resolution_by": "none registered"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos768-2026-11",
+   "pod": "DEBRIEF-math-erdos768",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG2",
+   "title": "Do the formal statements say what the problem asks?",
+   "status": "proposed",
+   "opened_cycle": 0,
+   "priority": 2,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "two independent mathematicians read the formal statement against the problem as posed and sign, or refuse",
+     "kind": "read",
+     "external": true,
+     "who_could_act": "a mathematician in the problem's area, about an hour with a reading guide"
+    }
+   ],
+   "spoken": "A Lean check establishes that the formal statement follows from its hypotheses. Whether that formal statement is the problem Erdős posed is a separate question that a person has to answer. No third-party formalization of the problem statement is recorded, so the comparison is entirely a human read.",
+   "ask": {
+    "spoken": "A reading of the formal statement against the problem as posed, by someone who did not write it."
+   },
+   "expected_signal": "a trace cycle and two signed read cycles, or a refusal naming the difference",
+   "resolution_by": "none registered"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos768-2026-11",
+   "pod": "DEBRIEF-math-erdos768",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG3",
+   "title": "No independent mathematician has reported reading the proof, and there is no referee report",
+   "status": "proposed",
+   "opened_cycle": 0,
+   "priority": 3,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "a read cycle by a mathematician in the area who is not an author, signing or refusing each main step",
+     "kind": "read",
+     "external": true,
+     "who_could_act": "a mathematician in the problem's area"
+    },
+    {
+     "what": "a referee report or journal acceptance, recorded by date",
+     "kind": "measurement",
+     "external": true,
+     "who_could_act": "a journal; the record notes the date when it happens"
+    }
+   ],
+   "spoken": "The claim is listed on the problem's page, which states that appearing there is no guarantee of correctness and that nobody associated with the site has examined it. No independent reading is on the public record.",
+   "ask": {
+    "spoken": "Someone in the field reads it and says, under their name, what holds and what does not."
+   },
+   "expected_signal": "a signed or refused read cycle; a dated referee report",
+   "resolution_by": "none registered"
+  }
+ ],
+ "anomalies": [],
+ "background": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos768-2026-11",
+   "pod": "DEBRIEF-math-erdos768",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "term": "Erdős Problem #768",
+   "spoken": "Let A be the set of positive integers n such that for every prime p dividing n there is a divisor d of n, greater than one, with d congruent to one modulo p. Erdős showed the proportion of such n up to N lies between two bounds of the shape exp(minus a constant times the square root of log N times log log N), and asked whether the proportion has that shape with a single exact constant c. The set bounds the number of possible orders of non-cyclic simple groups.",
+   "source": "https://www.erdosproblems.com/768"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos768-2026-11",
+   "pod": "DEBRIEF-math-erdos768",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "term": "Proof claims on erdosproblems.com",
+   "spoken": "The site lets anyone list a claimed proof. Its own text says that appearing there is no guarantee of correctness and does not mean anyone associated with the site has examined it. A listed claim is where checking starts, not where it ends.",
+   "source": "https://www.erdosproblems.com/forum/thread/768/proof-claims"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos768-2026-11",
+   "pod": "DEBRIEF-math-erdos768",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "term": "The claim by Eric Li",
+   "spoken": "The claim is that the limit exists and the constant is one over two times the square root of log 2. The lower bound uses primes in disjoint logarithmic intervals with a fourth-moment argument from the multiplicative large sieve; the upper bound uses canonical witness divisors, a compression map with an injective reconstruction theorem for its fibres, and growing divisor moments. The author reports that the main theorem and its complete proof were checked in Lean 4.",
+   "source": "https://www.erdosproblems.com/forum/thread/768/proof-claims"
+  }
+ ],
+ "sessions": []
+}
