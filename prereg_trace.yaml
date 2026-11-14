@@ -1,0 +1,47 @@
+# Pre-registration, cycle 2: a definitional trace (reading guide) of the claimant's formal statement of Erdős Problem #768,
+# for human semantic review. Written 2026-11-14 after cycle 1 (the build rerun, which printed the main theorem and its
+# three definitions) and BEFORE reading the Mathlib definitions behind that statement or writing any rendering. There is
+# no third-party formal statement of this problem, so the reader compares the claimant's statement to the problem page.
+mission: DEBRIEF-math-erdos768
+cycle: 2
+dated: "2026-11-14"
+by: "Nervous Machine (Heidi Bennett; Claude Code as the operating agent)"
+question: >
+  Can the open semantic gap (EG2: does the claimant's formal statement say what Erdős asked?) be made cheaper for a
+  human reviewer, by laying out the problem as posed, the formal statement, every definition it depends on down to
+  Mathlib and Lean core, a plain rendering of each, and the specific points a mathematician has to confirm?
+what_this_cycle_is:
+  - "An aid for review: trace/DEFINITIONAL-TRACE.md plus a machine transcript (cycles/trace-2/) of the statement and
+     definitions as the built development prints them, and of small worked examples checked by Lean."
+  - "The renderings are the operating agent's reading of Lean and Mathlib source. They are a reading, not a check."
+what_this_cycle_is_not:
+  - "Not an independent human semantic review. EG2 stays open after this cycle; the trace moves no standing."
+  - "It does not read or judge the paper's argument (EG3), and it does not compare the Lean proof to the paper."
+rules:
+  R1: "Every Lean statement is quoted verbatim from the claimant's repository at the pinned commit e46ab245 or from the
+       Mathlib revision it pins (8f9d9cff) and Lean core v4.28.0, with file and line, as found inside the built development."
+  R2: "Each rendering is marked as the agent's reading. Where the agent is unsure what a definition means, it says so."
+  R3: "Any place where the formal statement and the problem as posed differ in a way the agent can see (real versus
+       integer argument, a convention at 0 or for negatives, the membership of 1, the form of the asymptotic) is recorded
+       as a discrepancy whether or not it looks harmless, and as an anomaly in the ledger if it could change the meaning."
+  R4: "Worked examples are checked by Lean's kernel, not asserted: the transcript shows the commands and their output."
+observed_before_this_prereg:
+  - "The problem page: A is the set of n such that for every prime p | n there is d | n with d > 1 and d = 1 mod p. Is there
+     a constant c > 0 such that for all large N, |A ∩ [1,N]| / N = exp(-(c + o(1)) sqrt(log N) log log N)? Erdős had a lower
+     bound of that shape and a weaker upper bound exp(-(1+o(1)) sqrt(log N log log N))."
+  - "The claimant's main theorem, as printed in cycle 1: Tendsto (fun x => log (x / Acount x) / (sqrt (log x) * log (log x)))
+     atTop (nhds c₀), with SylowDivisor, Acount and c₀ = 1 / (2 sqrt (log 2)) as printed in cycles/rerun-1/axioms.txt."
+predictions:
+  P1: "The formal statement renders to the page's question with a specific constant: the limit of log(x / A(x)) over
+       sqrt(log x) log log x equals c₀, which is the same as |A ∩ [1,N]| / N = exp(-(c₀ + o(1)) sqrt(log N) log log N),
+       up to the real variable x in place of the integer N; a reviewer confirms that step."
+  P2: "At least one Lean convention needs a sentence (candidates: Real.log 0 = 0 and log of a negative; Real.sqrt of a
+       negative is 0; division by zero; Nat.floor of a negative real is 0; 1 is in A vacuously; A(x) = 0 for x < 1); none
+       changes the meaning, because the statement is a limit at infinity and every such case lives at small x."
+  P3: "The claim is stronger than the page's question: the page asks whether some c exists; the claim names c = 1/(2 sqrt(log 2))
+       and asserts the limit. The trace records the constant and its decimal value for the reader to compare with the paper."
+standing_consequences:
+  any_outcome: "EG2 remains open. Its ask changes from 'read the formal statement' to 'read the trace against the formal
+                statement and the problem page, and sign or refuse each checklist item'."
+  discrepancy_found: "An anomaly is opened naming it; if it could change the meaning, finding E1's note is rewritten
+                      to say so the same day."
