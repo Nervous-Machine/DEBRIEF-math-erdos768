@@ -23,7 +23,7 @@
    "began": "2026-11-14",
    "status": "active",
    "record_quality": "full_ledger",
-   "record_note": "Opened at tier zero on 2026-11-14: the claim and its artifacts pinned, the gaps drawn. Cycle 1, the same day: the Lean build rerun by Nervous Machine in a virtual machine under a pre-registered rule.",
+   "record_note": "Opened at tier zero on 2026-11-14: the claim and its artifacts pinned, the gaps drawn. Cycle 1, the same day: the Lean build rerun by Nervous Machine in a virtual machine under a pre-registered rule. Cycle 2, the same day: the reading guide for the semantic question.",
    "record_limits": [
     "The Lean build has been rerun once, by Nervous Machine. Nobody independent of the claimant has read the formal statement against the problem as posed, or the paper."
    ],
@@ -38,7 +38,7 @@
     "spoken": "Erdős asked for the exact rate at which the integers n, such that every prime factor p of n has a divisor of n greater than one congruent to one modulo p, thin out; the question bounds the possible orders of non-cyclic simple groups. In June 2026 Eric Li posted a paper claiming the exact constant, and in July a Lean development he reports as a complete formal check of the main theorem. On 2026-11-14 Nervous Machine built the Lean development at its pinned commit on an independent machine; the main theorem rests on the standard axioms only. Nobody independent has read the formal statement against the problem, or the paper. Those are the open gaps."
    },
    "what_happened": {
-    "spoken": "The claim was pinned from the public record. Nervous Machine then wrote down four checks and their predicted outcomes, fetched the Lean development at the pinned commit inside a virtual machine, built it, scanned it, and printed the main theorem's axioms with its own file. The build passed and the axioms are the standard three. The gaps that follow are the checks still owed, and they are now the human ones."
+    "spoken": "The claim was pinned from the public record. Nervous Machine then wrote down four checks and their predicted outcomes, fetched the Lean development at the pinned commit inside a virtual machine, built it, scanned it, and printed the main theorem's axioms with its own file. The build passed and the axioms are the standard three. The gaps that follow are the checks still owed, and they are now the human ones. A reading guide now lays the formal statement beside the problem as posed, definition by definition, so the human read takes under an hour."
    },
    "implications": {
     "rely_on": [
@@ -211,6 +211,59 @@
     "EG1",
     "EG2"
    ]
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "mission_id": "erdos768-2026-11",
+   "pod": "DEBRIEF-math-erdos768",
+   "created_by": "contributed cycle (merge_cycles.py)",
+   "created_at": "2026-11-14T23:37:04Z",
+   "provenance": {
+    "source": "contributed cycle file trace-2.yaml"
+   },
+   "audience": "briefing",
+   "kind": "trace",
+   "cycle": 2,
+   "dated": "2026-11-14",
+   "by": "Nervous Machine (Heidi Bennett; Claude Code as the operating agent)",
+   "not_an_author_of_the_claim": true,
+   "preregistered": {
+    "commit": "prereg_trace.yaml",
+    "results": [
+     "trace/DEFINITIONAL-TRACE.md",
+     "cycles/trace-2/Trace.lean",
+     "cycles/trace-2/trace.txt"
+    ],
+    "question": "Can the open semantic gap (EG2) be made cheaper for a human reviewer: the problem as posed, the claimant's formal statement, every definition behind it, a plain rendering, and the points to confirm?",
+    "rule": "Statements quoted verbatim from the pinned files with file and line; renderings marked as the agent's; every discrepancy recorded whether harmless or not; worked examples checked by Lean, not asserted; standing unchanged by construction.",
+    "predictions": [
+     "P1: the formal statement renders to the page's question with the specific constant c₀, the limit form being the page's exp(-(c+o(1))·scale) form after taking logarithms",
+     "P2: at least one Lean convention needs a sentence (total log, sqrt, division, floor; 1 ∈ A; A(x) = 0 for x < 1); none changes the meaning of a limit at infinity",
+     "P3: the claim is stronger than the page's question (a named constant and a limit, where the page asks whether some constant exists)"
+    ],
+    "before_data": true
+   },
+   "outcome": {
+    "verdict": "confirmed",
+    "numbers": {
+     "statements_traced": 3,
+     "pieces_traced": 7,
+     "definitions_cited": 9,
+     "worked_examples_checked_by_lean": 13,
+     "discrepancies_recorded": 7,
+     "content_affecting_discrepancies_seen_by_agent": 0,
+     "anomalies_opened": 0,
+     "human_review": false,
+     "checklist_items": 5,
+     "claimed_constant": "1 / (2 * sqrt (log 2)), about 0.6006"
+    },
+    "misses": []
+   },
+   "spoken": "Nervous Machine wrote the reading guide for the one question on this record that a machine cannot settle: whether the claimant's formal statement of problem 768 says what Erdős asked. There is no third-party formal statement of this problem, so the guide lays the claimant's own statement beside the problem page, quotes both word for word, traces every symbol to its definition in Mathlib or Lean's core with file and line, and has Lean check thirteen small facts, such as which small numbers belong to the set and what Lean does with the logarithm of zero. The one step left to a reader is routine: that a limit of a logarithmic ratio is the page's exponential form with a named constant. The readings are the system's, not a mathematician's, so nothing changed standing. A number theorist can now sign or refuse four lines in under an hour.",
+   "finding_ids": [],
+   "gap_ids": [
+    "EG2"
+   ]
   }
  ],
  "findings": [
@@ -318,6 +371,12 @@
      "hypothesis": "the formal statement, verbatim, is needed before anyone can read it against the problem",
      "before_data": true,
      "result": "main theorem and its three definitions printed by Lean into cycles/rerun-1/axioms.txt; the reading itself is still open"
+    },
+    {
+     "cycle": 2,
+     "hypothesis": "a definitional trace makes the human read cheap",
+     "before_data": true,
+     "result": "trace/DEFINITIONAL-TRACE.md written: three statements, seven pieces traced to Mathlib and core, thirteen Lean-checked examples, seven conventions recorded, none content-affecting in the agent's reading; status stays in_cycle, the ask is now to sign or refuse the checklist"
     }
    ],
    "closes_with": [
@@ -330,9 +389,9 @@
    ],
    "spoken": "A Lean check establishes that the formal statement follows from its hypotheses. Whether that formal statement is the problem Erdős posed is a separate question that a person has to answer. No third-party formalization of the problem statement is recorded, so the comparison is entirely a human read.",
    "ask": {
-    "spoken": "A reading of the formal statement against the problem as posed, by someone who did not write it."
+    "spoken": "A mathematician who is not an author reads trace/DEFINITIONAL-TRACE.md against the formal statement and the problem page and signs or refuses its four checklist lines, in about forty-five minutes. Two independent signatures close this gap."
    },
-   "expected_signal": "a trace cycle and two signed read cycles, or a refusal naming the difference",
+   "expected_signal": "two signed read cycles with no refusal, or a refusal naming the line and the difference",
    "resolution_by": "none registered"
   },
   {

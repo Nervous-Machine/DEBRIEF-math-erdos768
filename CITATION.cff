@@ -10,4 +10,4 @@ authors:
   - family-names: Bennett
     given-names: Heidi
     affiliation: Nervous Machine
-    # opened the record at tier zero and ran cycle 1, the Lean build rerun (2026-11-14), with Claude Code as the operating agent
+    # opened the record at tier zero and ran cycle 1, the Lean build rerun, and cycle 2, the reading guide (2026-11-14), with Claude Code as the operating agent

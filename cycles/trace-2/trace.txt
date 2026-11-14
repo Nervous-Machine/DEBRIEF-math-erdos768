@@ -1,0 +1,20 @@
+# Reading-guide transcript: lake env lean on cycles/trace-2/Trace.lean, inside the built development at commit e46ab245 (Mathlib 8f9d9cff); 2026-11-14T23:35:09Z
+Erdos768.erdos_768 : Tendsto (fun x => Real.log (x / ↑(Erdos768.Acount x)) / (√(Real.log x) * Real.log (Real.log x)))
+  atTop (nhds Erdos768.c₀)
+Erdos768.lower_bound : ∀ (ε : ℝ),
+  0 < ε → ∀ᶠ (x : ℝ) in atTop, x * Real.exp (-(Erdos768.c₀ + ε) * Erdos768.Sscale x) ≤ ↑(Erdos768.Acount x)
+Erdos768.upper_bound : ∀ (ε : ℝ),
+  0 < ε → ∀ᶠ (x : ℝ) in atTop, ↑(Erdos768.Acount x) ≤ x * Real.exp (-(Erdos768.c₀ - ε) * Erdos768.Sscale x)
+def Erdos768.SylowDivisor : ℕ → Prop :=
+fun n => ∀ (p : ℕ), Nat.Prime p → p ∣ n → ∃ d, d ∣ n ∧ 1 < d ∧ d % p = 1
+def Erdos768.Acount : ℝ → ℕ :=
+fun x => (Finset.filter Erdos768.SylowDivisor (Finset.Icc 1 ⌊x⌋₊)).card
+def Erdos768.c₀ : ℝ :=
+1 / (2 * √(Real.log 2))
+def Erdos768.Sscale : ℝ → ℝ :=
+fun x => √(Real.log x) * Real.log (Real.log x)
+def Filter.Tendsto.{u_1, u_2} : {α : Type u_1} → {β : Type u_2} → (α → β) → Filter α → Filter β → Prop :=
+fun {α} {β} f l₁ l₂ => map f l₁ ≤ l₂
+def Nat.Prime : ℕ → Prop :=
+fun p => Irreducible p
+exit=0

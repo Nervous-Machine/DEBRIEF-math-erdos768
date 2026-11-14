@@ -34,7 +34,7 @@ Each open gap is in `ASKS.md` with what closes it and who could act. In order:
 ## Contributing
 
 - **Rerun** (if there is a Lean development): copy `prereg_rerun.yaml`, fill in your predictions, register it with `tools/prereg.py register` from the protocol repository and commit it *before* running anything. Run. Report with the **Rerun report** issue form; it becomes a `rerun` cycle under your name.
-- **Read**: a trace (reading guide) does not exist yet. Writing one is itself a `trace` cycle. Once it exists, the **Semantic read** form takes signatures and refusals.
+- **Read**: the reading guide is `trace/DEFINITIONAL-TRACE.md` (cycle 2). It quotes the problem and the formal statement, traces every symbol to its definition, and ends with a four-line checklist. Sign or refuse it with the **Semantic read** issue form; your answers become a `read` cycle under your name. Two independent signatures close gap EG2.
 - **Anything else**: open a plain issue.
 
 Rules and templates: https://github.com/Nervous-Machine/DEBRIEF/blob/main/CONTRIBUTING.md. Every contribution is one dated cycle under your own name and goes into `CITATION.cff` and the next release.
@@ -46,6 +46,7 @@ ledger/erdos768.json   the ledger (protocol 0.1.0)
 claim.yaml            the pinned claim this record was opened from
 SCORECARD.md / ASKS.md  generated from the ledger
 prereg_rerun.yaml     the pre-registration of cycle 1 (hashed; copy it for your own rerun)
+trace/                the reading guide for the semantic question (cycle 2)
 cycles/               contributed cycles, one file each
 ```
 

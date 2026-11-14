@@ -1,0 +1,42 @@
+# Cycle 2: a definitional trace (reading guide) of the claimant's formal statement, for human semantic review.
+# Pre-registered in prereg_trace.yaml (hashed 2026-11-14T23:34:06Z) before the Mathlib definitions were read.
+kind: trace
+cycle: 2
+dated: "2026-11-14"
+by: "Nervous Machine (Heidi Bennett; Claude Code as the operating agent)"
+not_an_author_of_the_claim: true
+preregistered:
+  commit: "prereg_trace.yaml"
+  results: ["trace/DEFINITIONAL-TRACE.md", "cycles/trace-2/Trace.lean", "cycles/trace-2/trace.txt"]
+  question: "Can the open semantic gap (EG2) be made cheaper for a human reviewer: the problem as posed, the claimant's formal statement, every definition behind it, a plain rendering, and the points to confirm?"
+  rule: "Statements quoted verbatim from the pinned files with file and line; renderings marked as the agent's; every discrepancy recorded whether harmless or not; worked examples checked by Lean, not asserted; standing unchanged by construction."
+  predictions:
+    - "P1: the formal statement renders to the page's question with the specific constant c₀, the limit form being the page's exp(-(c+o(1))·scale) form after taking logarithms"
+    - "P2: at least one Lean convention needs a sentence (total log, sqrt, division, floor; 1 ∈ A; A(x) = 0 for x < 1); none changes the meaning of a limit at infinity"
+    - "P3: the claim is stronger than the page's question (a named constant and a limit, where the page asks whether some constant exists)"
+  before_data: true
+outcome:
+  verdict: confirmed
+  numbers:
+    statements_traced: 3
+    pieces_traced: 7
+    definitions_cited: 9
+    worked_examples_checked_by_lean: 13
+    discrepancies_recorded: 7
+    content_affecting_discrepancies_seen_by_agent: 0
+    anomalies_opened: 0
+    human_review: false
+    checklist_items: 5
+    claimed_constant: "1 / (2 * sqrt (log 2)), about 0.6006"
+  misses: []
+spoken: >-
+  Nervous Machine wrote the reading guide for the one question on this record that a machine cannot settle: whether the
+  claimant's formal statement of problem 768 says what Erdős asked. There is no third-party formal statement of this
+  problem, so the guide lays the claimant's own statement beside the problem page, quotes both word for word, traces every
+  symbol to its definition in Mathlib or Lean's core with file and line, and has Lean check thirteen small facts, such as
+  which small numbers belong to the set and what Lean does with the logarithm of zero. The one step left to a reader is
+  routine: that a limit of a logarithmic ratio is the page's exponential form with a named constant. The readings are the
+  system's, not a mathematician's, so nothing changed standing. A number theorist can now sign or refuse four lines in
+  under an hour.
+finding_ids: []
+gap_ids: ["EG2"]
