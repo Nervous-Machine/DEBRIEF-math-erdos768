@@ -1,20 +1,22 @@
-# Pre-registration for the first rerun of this claim's Lean development. Fill in, then register BEFORE running:
-#   python3 <DEBRIEF>/tools/prereg.py register prereg_rerun.yaml   (writes prereg_rerun.yaml.sha256; commit both)
+# Pre-registration for the first rerun of this claim's Lean development. Registered BEFORE any fetch of the
+# claimant's repository; the sidecar prereg_rerun.yaml.sha256 carries the hash and the UTC time of registration.
 mission: DEBRIEF-math-erdos768
-by: "<your name as you want it recorded>"
-dated: "<YYYY-MM-DD>"
+by: "Nervous Machine (Heidi Bennett; Claude Code as the operating agent)"
+dated: "2026-11-14"
 question: "Does the claimant's Lean development build at the pinned commit on an independent machine, with no sorry or admit, and which axioms does the main theorem use?"
-rule: "All checks below pass as predicted; any miss is recorded under misses."
+rule: "All checks below pass as predicted; any miss is recorded under misses. The build runs only inside an isolated virtual machine; nothing from the repository is executed on the host."
+environment_planned: "Lima VM `primegaps` on an Apple-silicon host: aarch64 Ubuntu, 20 cores, 98 GB memory; elan-managed Lean toolchain as pinned by the repository's lean-toolchain file."
 checks:
   - id: R1
-    what: "fetch github.com/ericlisg/erdos768-lean at e46ab245f1e5eb2d1f0b184874c4e32e02ad16c9; confirm the tree matches"
-    prediction: "commit present; tree unchanged"
+    what: "git clone github.com/ericlisg/erdos768-lean and check out e46ab245f1e5eb2d1f0b184874c4e32e02ad16c9; confirm HEAD is that commit and the working tree is clean"
+    prediction: "commit present; HEAD matches; tree clean"
   - id: R2
-    what: "lake exe cache get (if Mathlib) and lake build; record wall time and peak memory"
-    prediction: "exit 0, 0 errors; <your predicted time and memory>"
+    what: "lake exe cache get (if Mathlib is a dependency), then lake build under /usr/bin/time -v; record wall time and peak memory"
+    prediction: "exit 0 with no errors; wall time under three hours on 20 cores (the project vendors PrimeNumberTheoremAnd and LeanArchitect, which may build from source); peak memory under 48 GB"
   - id: R3
-    what: "grep for sorry, admit, native_decide and custom axioms across the development"
-    prediction: "none"
+    what: "scan every .lean file of the project proper (excluding the vendored dependencies and .lake) for sorry, admit, native_decide and axiom declarations; list each hit by file and line"
+    prediction: "no sorry, no admit, no native_decide, no axiom declarations in the project proper"
   - id: R4
-    what: "#print axioms on the main theorem"
+    what: "#print axioms on the theorem the repository's README names as the main result (the exact constant for problem 768); record its full statement verbatim for the reading guide"
     prediction: "propext, Classical.choice, Quot.sound only"
+logs: "cycles/rerun-1/ (build.log, time.txt, scan.txt, axioms.txt, manifest.json with the toolchain and dependency commits)"
