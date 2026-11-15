@@ -2,6 +2,8 @@
 
 A DEBRIEF mission record (protocol https://github.com/Nervous-Machine/DEBRIEF) for **The claimed solution of Erdős Problem #768 (density of integers with a witness divisor for every prime factor)**.
 
+This claim is on the public claims board, https://math-board.nervousmachine.com, which shows its stage, who has contributed, and what it needs next.
+
 **Standing.** Certified 1. Accepted 0. Refuted 0. Open gaps 2. The claim and its public artifacts are pinned. On 2026-11-14 Nervous Machine rerun the Lean build at the pinned commit inside a virtual machine, under a rule written down first (cycle 1, logs in `cycles/rerun-1/`): the build passed and the main theorem depends on the three standard axioms only. Nobody has yet read the formal statement against the problem as posed, or the paper; those are the open gaps and the next contributions.
 
 ## The problem
