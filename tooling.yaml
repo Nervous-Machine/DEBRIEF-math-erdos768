@@ -1,0 +1,11 @@
+# Tooling disclosure for this record's claim(s): which models, at what access tier, over what time, as stated by the
+# claimant or inferred from the public record (the basis says which). Read by DEBRIEF/tools/tooling.py into the ledger.
+# Tier words and model release dates: DEBRIEF/tools/models.yaml. Nothing here is a standing.
+claims:
+- models:
+  - gpt-5-5-pro
+  tier: subscription-pro
+  basis: 'stated by the claimant: GPT-5.5 Pro, a model of the ChatGPT Pro, Business and Enterprise tiers'
+  by: Eric Li
+  work:
+    to: '2026-07-17'

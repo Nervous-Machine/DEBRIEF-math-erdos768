@@ -79,6 +79,30 @@
      "kind": "repo",
      "ref": "github.com/ericlisg/erdos768-lean at commit e46ab245f1e5eb2d1f0b184874c4e32e02ad16c9 (2026-08-02); licence Apache-2.0; 38 Lean files; has a lakefile"
     }
+   ],
+   "tooling": [
+    {
+     "by": "Eric Li",
+     "tier": "subscription-pro",
+     "basis": "stated by the claimant: GPT-5.5 Pro, a model of the ChatGPT Pro, Business and Enterprise tiers",
+     "models": [
+      {
+       "model": "GPT-5.5 Pro",
+       "id": "gpt-5-5-pro",
+       "vendor": "OpenAI",
+       "public_release": "2026-04-23",
+       "tiers_at_release": [
+        "subscription-pro"
+       ],
+       "public_at_the_time": "yes"
+      }
+     ],
+     "work": {
+      "to": "2026-07-17"
+     },
+     "duration": "not stated",
+     "compute": "not stated"
+    }
    ]
   }
  ],
