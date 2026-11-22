@@ -16,7 +16,7 @@ This claim is on the public claims board, https://math-board.nervousmachine.com,
 | checked by machine | Nervous Machine |
 | read by a person | nobody yet; [reading guide](trace/DEFINITIONAL-TRACE.md) |
 | elsewhere | [DeepMind formal-conjectures](https://github.com/google-deepmind/formal-conjectures): no file · [erdosproblems.com](https://www.erdosproblems.com/): open |
-| related | [Erdős #1177](https://github.com/Nervous-Machine/DEBRIEF-math-erdos1177): same claimant · [Erdős #550](https://github.com/Nervous-Machine/DEBRIEF-math-erdos550): same claimant · [Erdős #593](https://github.com/Nervous-Machine/DEBRIEF-math-erdos593): same claimant · [Erdős #731](https://github.com/Nervous-Machine/DEBRIEF-math-erdos731): same claimant |
+| related | same claimant: [Erdős #1177](https://github.com/Nervous-Machine/DEBRIEF-math-erdos1177), [Erdős #550](https://github.com/Nervous-Machine/DEBRIEF-math-erdos550), [Erdős #593](https://github.com/Nervous-Machine/DEBRIEF-math-erdos593), [Erdős #731](https://github.com/Nervous-Machine/DEBRIEF-math-erdos731) |
 
 Rendered from `ledger/` at regeneration; the full record is `SCORECARD.md`, what is owed is `ASKS.md`. Standing words: 1 certified.
 <!-- standing:end -->
